@@ -41,6 +41,8 @@ namespace OC_CMSC_5733_Assignment_1
             foreach (int n in nums2Reversed)
                 Console.Write(n + " ");
             Console.Write("\n");
+			
+            Console.WriteLine("\n\nThank you for using my neat program :)");
         }
 
         /// <summary>
