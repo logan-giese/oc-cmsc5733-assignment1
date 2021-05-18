@@ -17,6 +17,12 @@ namespace OC_CMSC_5733_Assignment_1
             Console.WriteLine("List sum\t= " + Sum(nums));
             Console.WriteLine("List product\t= " + Product(nums));
 
+            Console.Write("List reversed\t= ");
+            int[] numsReversed = Reverse(nums);
+            foreach (int n in numsReversed)
+                Console.Write(n + " ");
+            Console.Write("\n");
+
             // Get user-entered numbers
             List<int> nums2 = new List<int>();
             Console.WriteLine("\n-- Enter your own numbers --\n(Enter a blank line to finish)\n");
@@ -55,6 +61,19 @@ namespace OC_CMSC_5733_Assignment_1
                 product *= numbers[i];
             }
             return product;
+        }
+
+        /// <summary>
+        /// Reverse the order of a list of numbers
+        /// </summary>
+        static int[] Reverse(int[] numbers)
+        {
+            int[] newNums = new int[numbers.Length];
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                newNums[numbers.Length - 1 - i] = numbers[i];
+            }
+            return newNums;
         }
     }
 }
