@@ -35,6 +35,12 @@ namespace OC_CMSC_5733_Assignment_1
             // Test with user-entered numbers
             Console.WriteLine("List sum\t= " + Sum(nums2.ToArray()));
             Console.WriteLine("List product\t= " + Product(nums2.ToArray()));
+
+            Console.Write("List reversed\t= ");
+            int[] nums2Reversed = Reverse(nums2.ToArray());
+            foreach (int n in nums2Reversed)
+                Console.Write(n + " ");
+            Console.Write("\n");
         }
 
         /// <summary>
