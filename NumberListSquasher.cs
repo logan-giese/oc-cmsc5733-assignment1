@@ -13,8 +13,22 @@ namespace OC_CMSC_5733_Assignment_1
 
             // Run tests
             Console.WriteLine("== Number List Squasher ==\n");
+            Console.WriteLine("List: 3, 4, 5, 7, 8, 9, 42");
             Console.WriteLine("List sum\t= " + Sum(nums));
             Console.WriteLine("List product\t= " + Product(nums));
+
+            // Get user-entered numbers
+            List<int> nums2 = new List<int>();
+            Console.WriteLine("\n-- Enter your own numbers --\n(Enter a blank line to finish)\n");
+            string input;
+            while ((input = Console.ReadLine()) != "")
+            {
+                nums2.Add(Int32.Parse(input));
+            }
+
+            // Test with user-entered numbers
+            Console.WriteLine("List sum\t= " + Sum(nums2.ToArray()));
+            Console.WriteLine("List product\t= " + Product(nums2.ToArray()));
         }
 
         /// <summary>
