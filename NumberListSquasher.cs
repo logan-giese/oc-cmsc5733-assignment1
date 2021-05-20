@@ -29,7 +29,12 @@ namespace OC_CMSC_5733_Assignment_1
             string input;
             while ((input = Console.ReadLine()) != "")
             {
-                nums2.Add(Int32.Parse(input));
+                // Attempt to parse the input and give an error if invalid (ie. not a number)
+                int parsedInt;
+                if (int.TryParse(input, out parsedInt))
+                    nums2.Add(parsedInt);
+                else
+                    Console.WriteLine("Error: Only numbers are accepted!");
             }
 
             // Test with user-entered numbers
