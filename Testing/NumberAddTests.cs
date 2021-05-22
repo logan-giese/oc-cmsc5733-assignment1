@@ -75,5 +75,19 @@ namespace Testing
             // Assert
             Assert.AreEqual(true, canAdd);
         }
+
+        [TestMethod]
+        public void CannotAdd()
+        {
+            // Arrange
+            int[] numbers = { 5, 6, 7, 8, 9, 10 };
+            int target = 42;
+
+            // Act
+            bool canAdd = NumberAddChecker.CanAddTo(numbers, target);
+
+            // Assert
+            Assert.AreEqual(false, canAdd);
+        }
     }
 }
